@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+:root {
+  /* Palette: ink / bone / electric blue / acid lime */
+  --ink: #08090c;
+  --ink-2: #0e1016;
+  --ink-3: #14171f;
+  --ink-4: #1b1f2a;
+  --bone: #f3f0e6;
+  --bone-dim: #9aa0ad;
+  --electric: #5b7cfa;
+  --line-soft: #1d212b;
+  --line-strong: #3a4050;
+  --row-hover: rgba(201, 247, 58, 0.055);
+
+  color-scheme: light dark;
+  font: 16px/1.5 var(--font-sans);
+  letter-spacing: 0.01em;
+  color: var(--bone-dim);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--ink);
+  color: var(--bone-dim);
+}
+
+#root {
+  min-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--line-strong);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
