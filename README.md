@@ -203,7 +203,7 @@ Ketika API mengembalikan 10.000 data user sekaligus, proses pencarian dapat meny
 
 Saya menggunakan `useDeferredValue` untuk menunda pembaruan nilai pencarian yang digunakan oleh daftar user, sehingga input pencarian tetap responsif meskipun proses filtering membutuhkan waktu lebih lama.
 
-Contoh implementasi, memakai filter yang sama dengan `src/components/table-user.jsx` (tanpa `useMemo`, karena memoisasi ditangani React Compiler yang aktif di project ini):
+Contoh implementasi, memakai filter yang sama dengan `src/components/table-user.jsx`:
 
 ```jsx
 const deferredQuery = useDeferredValue(
